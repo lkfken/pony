@@ -14,7 +14,7 @@ Any option key may be omitted except for ```:to```.  See List Of Options section
 
 Pony uses ```/usr/sbin/sendmail``` to send mail if it is available, otherwise it uses SMTP to localhost.
 
-This can be over-ridden if you specify a via option:
+This can be overridden if you specify a via option:
 
     Pony.mail(:to => 'you@example.com', :via => :smtp) # sends via SMTP
     Pony.mail(:to => 'you@example.com', :via => :sendmail) # sends via sendmail
