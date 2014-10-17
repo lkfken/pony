@@ -61,7 +61,7 @@ And options for Sendmail:
       }
     })
 
-If you're using ssmtp, set ```:arguments => ''```.
+If you're using smtp, set ```:arguments => ''```.
 
 ## Attachments ##
 
