@@ -44,11 +44,13 @@ Gmail example (with TLS/SSL)
         :port                 => '587',
         :enable_starttls_auto => true,
         :user_name            => 'user',
-        :password             => 'password',
+        :password             => 'password_see_note',
         :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
         :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
       }
     })
+
+Note: If you use 2 step verification, you will have to generate an application specific password and NOT use your normal password - see https://support.google.com/accounts/answer/185833?hl=en
 
 And options for Sendmail:
 
