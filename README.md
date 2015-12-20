@@ -161,6 +161,17 @@ Append the options passd into Pony.mail to the body of the email.  Useful for de
 
     Pony.append_inputs
 
+### Using Pony with Testing or Spec'ing Libraries ###
+
+As pony relies on mail to send the mails, you can also use its TestMailer in your tests.
+
+    Pony.override_options = { :via => :test }
+    Pony.mail(:to => 'foo@bar')
+    Mail::TestMailer.deliveries.length
+    => 1
+    
+For further examples see the [corresponding section of mail's readme](https://github.com/mikel/mail#using-mail-with-testing-or-specing-libraries)
+
 ## Help ##
 
 If you need help using Pony, or it looks like you've found a bug,
