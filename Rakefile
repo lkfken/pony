@@ -28,6 +28,7 @@ task :uninstall => [ :clean ] do
 	sh %{sudo gem uninstall #{name}}
 end
 
+desc "Print all authors from git history"
 task :authors do
   token = `cat ~/.github_token`.chomp
   authors = `git log |grep Author |cut -f 1 -d'<' |cut -f2 -d':' |sort -u`
